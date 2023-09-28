@@ -11,6 +11,8 @@ function App() {
   const [create, createSet] = useState("create");
   const [stays, staysSet] = useState("stays");
   const [pass, passSet] = useState("none");
+  const [spinner, spinnerSet] = useState("");
+  const [next, nextSet] = useState("");
   const [signs, signsSet] = useState("Sign In");
   const [sorry, sorrySet] = useState("");
   const [submit, submitSet] = useState("");
@@ -94,13 +96,17 @@ function App() {
   const handleSubmit = async (event) => {
     event.preventDefault()
     setIsButtonDisabled(true)
-    
+    spinnerSet('spinner')
+    nextSet('none')
     if (inputValue === "") {
+      spinnerSet('')
+      nextSet('')
       // alert("Please enter a username.");
       sorrySet("Sorry, we don't recognize this email.")
       setTimeout(() => {
         sorrySet("")
       setIsButtonDisabled(false)
+
       }, 1500);
       return;
     }
@@ -116,7 +122,8 @@ function App() {
         // alert('Sorry, we dont recognize this email.')
         sorrySet("Sorry, we don't recognize this email.")
       setIsButtonDisabled('')
-
+      spinnerSet('')
+      nextSet('')
         // window.location.reload();
       } else {
         // alert("Enter Password")
@@ -133,11 +140,13 @@ function App() {
   const handleSubmitPwd = async (event) => {
     event.preventDefault()
     setIsButtonDisabled('true')
-    
+    spinnerSet('spinner')
+    nextSet('none')
     if (passwordd === "") {
       // alert("Please enter a username.");
       sorrySet("Enter password")
-      
+      spinnerSet('')
+      nextSet('')
       setTimeout(() => {
         sorrySet("")
       }, 1500);
@@ -152,6 +161,8 @@ function App() {
         password,
       });
       if (response.data.succ === 'false'){
+        spinnerSet('')
+        nextSet('')
         // alert('Sorry, we dont recognize this email.')
         sorrySet("Invalid password, please try again.")
         // window.location.reload();
@@ -222,7 +233,11 @@ function App() {
               value={inputValue} onChange={handleInputChange}
             />
             <div className={invalid}>{validMessage}</div>
-            <button type="submit" className={darkBl} disabled={isButtonDisabled} >Next</button>
+            <button type="submit" className={darkBl} disabled={isButtonDisabled} >
+              
+              <div className={next}>Next</div>
+            <div className={spinner}></div>
+            </button>
           </div>
           <br/>
           <div className={stays}>
@@ -260,7 +275,10 @@ function App() {
               value={passwordd} onChange={handleChange}
             />
             <div className={invalid}>{validMessage}</div>
-            <button type="submit" className={darkBl} disabled={isButtonDisabled} >Next</button>
+            <button type="submit" className={darkBl} disabled={isButtonDisabled} >
+            <div className={next}>Next</div>
+            <div className={spinner}></div>
+            </button>
           </div>
           <br/>
           <div className={stays}>
