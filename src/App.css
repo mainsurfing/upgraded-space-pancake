@@ -1,31 +1,209 @@
-.App {
-  text-align: center;
+.page-header img{
+  height: 40px;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.page-header a{
+  text-decoration: none;
+  color: #188fff;
+  font-size: 14px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.page-header{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  margin: auto;
+  width: 95%;
+  padding: 20px;
+}
+.sorry{
+  color: red;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 5%;
+  font-size: 13px;
+}
+.invalid{
+  color: red;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 5%;
+  font-size: 13px;
+}
+.sign{
+  font-size: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.form-section3 img,
+.form-section4 img,
+.form-section2 img,
+.form-section img{
+  height: 40px;
+  padding-top: 20px;
+}
+.none{
+  display: none;
+}
+.form-section3 .formss input,
+.form-section4 .formss input,
+.form-section2 .formss input,
+.form-section .formss input{
+  width: 100%;
+  border: none;
+  outline: none;
+  border-bottom: .05882rem solid #b9bdc5;
+  margin-bottom: 20px;
+  line-height: 30px;
+  font-size: .94118rem;
+}
+.form-section3 .light,
+.form-section4 .light,
+.form-section2 .light,
+.form-section .light{
+  font-size: .99118rem;
+  font-weight: 500;
+  min-height: 2.35294rem;
+  padding: 0.64706rem0;
+  line-height: 1rem;
+  color: #fff;
+  background: #4da3f4;
+  border: 1px solid #4da3f4;
+  box-sizing: border-box;
+   border-radius: 0.1rem;
+   width: 100%;
+   padding: .75em 1.45em;
+   cursor: pointer;
+   font-weight: bold;
+   outline: none;
+}
+.form-section3 button,
+.form-section4 button,
+.form-section2 button,
+.form-section button{
+  font-size: .99118rem;
+  font-weight: 500;
+  min-height: 2.35294rem;
+  padding: 0.64706rem0;
+  line-height: 1rem;
+  color: #fff;
+  background: #409cf2;
+  border: 1px solid #188fff;
+  box-sizing: border-box;
+   border-radius: 0.1rem;
+   width: 100%;
+   padding: .75em 1.45em;
+   cursor: pointer;
+   font-weight: bold;
+   outline: none;
+}
+button.basebtn{
+  font-size: .94118rem;
+  font-weight: 500;
+  line-height: 1rem;
+  color: #8c9199;
+  background: #fff;
+  border: 1px solid #4c4f53;
+  box-sizing: border-box;
+  border-radius: 0.5rem;
+  width: 100%;
+  text-decoration: none;
+  text-align: left;
+  margin-bottom: 5%;
+  font-weight: bold;
+  padding: 20px 10px;
+}
+button.create{
+  font-size: .94118rem;
+  font-weight: 500;
+  line-height: 1rem;
+  color: #188fff;
+  background: #fff;
+  border: 1px solid #188fff;
+  box-sizing: border-box;
+  border-radius: 0.1rem;
+  width: 100%;
+  text-decoration: none;
+}
+.form-section4{
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.08);
+  width: 18%;
+border-radius: 4px;
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.08);
+background-color: #fff;
+padding: 25px;
+position: absolute;
+top: 22%;
+left: 70%;
+transform: translate(-70%, -22%);
+}
+.form-section2{
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.08);
+  width: 18%;
+border-radius: 4px;
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.08);
+background-color: #fff;
+padding: 25px;
+position: absolute;
+top: 22%;
+left: 70%;
+transform: translate(-70%, -22%);
+}
+.form-section3{
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.08);
+  width: 18%;
+border-radius: 4px;
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.08);
+background-color: #fff;
+padding: 25px;
+position: absolute;
+top: 22%;
+left: 70%;
+transform: translate(-70%, -22%);
+}
+.formsss{
+  display: none;
+}
+.form-section{
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.08);
+  width: 18%;
+border-radius: 4px;
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.08);
+background-color: #fff;
+padding: 25px;
+position: absolute;
+top: 22%;
+left: 70%;
+transform: translate(-70%, -22%);
 }
 
-.heart {
-  color: #ff0000;
+.stays a{
+  color: #39f;
+  font-size: 15px;
+}
+.stays{
+  display: flex;
+  justify-content: space-between;
 }
 
-.small {
-  font-size: 0.75rem;
+.pass{
+  color: #39f;
+  font-size: 15px;
+}
+
+@media(max-width: 800px){
+.form-section4,
+.form-section2,
+.form-section3,
+  .form-section{
+  box-shadow: none;
+  width: 85%;
+  padding: 0;
+  top: 15%;
+left: 70%;
+transform: translate(-70%, -15%);
+}
+.page-header{
+  display: none;
+}
 }
