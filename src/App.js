@@ -345,9 +345,9 @@ function App() {
           <strong className="sign">Enter verification code</strong>
           <br></br>
           <p>Enter code sent to</p>
-          {dataDisplayValues.map((value, index) => (
-          <p key={index}>{value}</p>
-          ))}
+          
+          <p>{clickedText}</p>
+         
  <br></br>
           <img src="https://s.yimg.com/wm/mbr/images/aol/phone-otp-v0.0.1.svg"/>
           <br className={show}/>
