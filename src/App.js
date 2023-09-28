@@ -130,6 +130,8 @@ function App() {
         formssShow('formsss')
         formssShows('')
       setIsButtonDisabled('')
+      spinnerSet('')
+      nextSet('')
       }
 
     } catch (error) {
